@@ -50,7 +50,7 @@ if(isset($_POST['submit']))
 
    <style>
         .password-container {
-            margin: 20px;
+            margin: 20px; 
         }
         .toggle-icon {
             cursor: pointer;
