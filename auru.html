@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Section with Details</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2a9d8f;
+    }
+
+    .view-details-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-details-btn:hover {
+      background-color: #21867a;
+    }
+
+    .product-details {
+      display: none;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .product-details p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .product-details p span {
+      font-weight: bold;
+    }
+
+    .product-card.active .product-details {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="product-section">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250" alt="Product Image">
+      <h2 class="product-title">Product Name 1</h2>
+      <p class="product-price">$19.99</p>
+      <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+      
+      <div class="product-details">
+        <p><span>Brand:</span> Brand Name 1</p>
+        <p><span>Color:</span> Red, Blue, Green</p>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250" alt="Product Image">
+      <h2 class="product-title">Product Name 2</h2>
+      <p class="product-price">$29.99</p>
+      <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+      
+      <div class="product-details">
+        <p><span>Brand:</span> Brand Name 2</p>
+        <p><span>Color:</span> Black, White</p>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250" alt="Product Image">
+      <h2 class="product-title">Product Name 3</h2>
+      <p class="product-price">$39.99</p>
+      <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+      
+      <div class="product-details">
+        <p><span>Brand:</span> Brand Name 3</p>
+        <p><span>Color:</span> Yellow, Purple</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleDetails(button) {
+      const card = button.parentElement;
+      card.classList.toggle('active');
+      button.textContent = card.classList.contains('active') ? 'Hide Details' : 'View Details';
+    }
+  </script>
+
+</body>
+</html>
