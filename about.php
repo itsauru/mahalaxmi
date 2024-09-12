@@ -18,7 +18,7 @@
 				<div class="row center_o1">
 					<div class="col-md-9">
 					  <div class="center_o1l">
-					    <h1 class="font_60 text-white">About</h1>
+					    <h1 class="font_60 text-white">About Us</h1>
 						<p class="text-white p-3 mt-3 mb-0">Welcome to Mahalaxmi Furniture,<br> where tradition meets artistry. </p>
 					  </div>
 					</div>
